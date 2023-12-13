@@ -299,6 +299,9 @@ class Skylink:
                     else:
                         data['description'] = '...'
                 if 'cover' in data:
+                    if data['cover'] is None:
+                        data['cover'] = data['cover']
+                    else:
                     # url in web page - https://m7cz.solocoo.tv/m7cziphone/mmchan/mpimages/447x251/_hash_.jpg
                     # url in data - mmchan/mpimages/_hash_.jpg
                     data['cover'] = M7_API_URL + data['cover'].replace('mpimages', 'mpimages/447x251')
