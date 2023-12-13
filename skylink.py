@@ -303,6 +303,7 @@ class Skylink:
                         data['cover'] = M7_API_URL + data['cover'].replace('mpimages', 'mpimages/447x251')
                     else:
                         data['cover'] = data['cover']
+                    # EPG Creation fix as at the latest directone update EPG creation failed as some of cover data was None.
                     # url in web page - https://m7cz.solocoo.tv/m7cziphone/mmchan/mpimages/447x251/_hash_.jpg
                     # url in data - mmchan/mpimages/_hash_.jpg
                 data.update(times(data['locId']))
